@@ -26,3 +26,8 @@ sudo apt-get install -y xfce4-whiskermenu-plugin
 
 # Use German keyboard layout
 #L='de' && sudo sed -i 's/XKBLAYOUT=\"\w*"/XKBLAYOUT=\"'$L'\"/g' /etc/default/keyboard
+
+sudo DEBIAN_FRONTEND=noninteractive apt-get install jq -y
+
+sudo DEBIAN_FRONTEND=noninteractive apt-get install git -y
+

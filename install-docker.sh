@@ -26,3 +26,10 @@ if [ -n "$MINIKUBE" ]; then
 	curl -sLo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube && sudo cp minikube /usr/local/bin/ && rm minikube
 	curl -sLo kubectl https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl && chmod +x kubectl && sudo cp kubectl /usr/local/bin/ && rm kubectl
 fi
+
+curl -s -LO https://storage.googleapis.com/kubernetes-release/release/v1.18.2/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+sudo install kubectl /usr/local/bin/
+sudo usermod -aG docker vagrant
+
+curl -sLo clusterawsadm https://github.com/kubernetes-sigs/cluster-api-provider-aws/releases/download/v0.5.5/clusterawsadm-linux-amd64 && chmod +x clusterawsadm && sudo cp clusterawsadm /usr/local/bin/ && rm clusterawsadm

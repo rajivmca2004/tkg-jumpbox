@@ -19,6 +19,8 @@ The vagrantfile in the demo creates a virtualbox VM on your local machine and th
 
 Note: The reason we're doing all this installation from a Vagrant VM is so as to provide a consistent installation experience. This is not to say that the installation cannot be done from a Windows, Mac or any other Linux distro.
 
+We will majorly be following the documentation here to do the installation: https://docs.vmware.com/en/VMware-Tanzu-Kubernetes-Grid/1.1/vmware-tanzu-kubernetes-grid-11/GUID-install-tkg-aws.html 
+
 # Pre-requisites
 
 1. Clone this git repository on your machine
@@ -40,4 +42,11 @@ Note: The reason we're doing all this installation from a Vagrant VM is so as to
     - Navigate to the Storage tab and Click the CD icon next to Controller: IDE on the left hand side. If the option is grey, it most likely means that your VM is still running - implying you're forgotten to run `vagrant halt`
     - After clicking on the CD icon, select the `VBoxGuestAdditions.iso` file. If your filename varies slightly, that's ok.
     - Click ok/ Accept etc. and close the dialog box. What you've done is that you've inserted a CD into the Virtual Machine containing the Virtual Box Addons.
+    - Now in the command line on your machine where you installed vagrant, run the command `vagrant plugin install vagrant-scp`
+    - Once the previous command completes, run the command `vagrant up` to start your VM.
+    - **The username and password are vagrant and vagrant respectively**
+    - Once the VM comes up, there's a small icon at the bottom of the VM window which looks like a monitor. Use that to increase and decrease the size of the window to suit your screen's aspect ratio.
 
+# Steps:
+
+1. 

@@ -9,7 +9,7 @@ end
     # Display the VirtualBox GUI when booting the machine
     vb.name = "tkg_jumpbox"
     vb.gui = true
-    vb.memory = 2048
+    vb.memory = 4096
     vb.cpus = 2
     vb.customize ['modifyvm', :id, '--clipboard', 'bidirectional']
   end
@@ -23,5 +23,5 @@ end
   config.vm.provision "shell", path: "install-desktop.sh"
   config.vm.provision "shell", path: "install-chrome.sh"
   config.vm.provision "shell", path: "install-docker.sh"
-  #config.vm.provision "shell", path: "install-awscli.sh"
+  config.vm.provision "shell", path: "install-tools.sh"
 end

@@ -80,12 +80,9 @@ The following steps are a short summarization for the detailed documentation at 
     export AWS_REGION=us-west-2  # or substitute with your AWS region of choice
     ```
 Note: If you use multi-factor authentication, your AWS session token is also required
-
     ```bash
-        export AWS_SESSION_TOKEN="your aws session token"
+    export AWS_SESSION_TOKEN="your aws session token"
     ```
-    
-
 2. Initialize clusterawsadm
     ```bash
         clusterawsadm alpha bootstrap create-stack
